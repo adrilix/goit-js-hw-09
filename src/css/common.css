@@ -22,7 +22,7 @@ img {
   
 }
 .field :not(:last-child) {
-  color: #ff0000;
+  color: #ff0037;
 }
 .field{
   display: flex;
