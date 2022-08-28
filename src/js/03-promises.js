@@ -15,7 +15,7 @@ function onClickPromise(event) {
   const inputDelayStep = Number(refs.delayStep.value);
   const inputAmount = Number(refs.amount.value);
 
-  for (i = 1, delay = inputDelay; i <= inputAmount; i += 1, delay += inputDelayStep) {
+  for (let i = 1, delay = inputDelay; i <= inputAmount; i += 1, delay += inputDelayStep) {
     createPromise(i, delay)
       .then(({ position, delay }) => {
         Notiflix.Notify
