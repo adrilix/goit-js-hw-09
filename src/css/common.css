@@ -19,5 +19,16 @@ img {
 
 .timer{
   display: flex;
-  justify-content: center;
+  
+}
+.field :not(:last-child) {
+  color: #ff0000;
+}
+.field{
+  display: flex;
+  flex-direction: column;
+  margin-right: 50px;
+}
+.value{
+  font-size: large;
 }
