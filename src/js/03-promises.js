@@ -15,8 +15,8 @@ function onClickPromise(event) {
   const inputDelayStep = Number(refs.delayStep.value);
   const inputAmount = Number(refs.amount.value);
 
-  for (let i = 1, delay = inputDelay; i <= inputAmount; i += 1, delay += inputDelayStep) {
-    createPromise(i, delay)
+  for (let i = 1; i <= inputAmount; i += 1) {
+    createPromise(i, inputDelay + (i-1) * inputDelayStep)
       .then(({ position, delay }) => {
         Notiflix.Notify
           .success(`✅ Fulfilled promise ${position} in ${delay}ms`)
